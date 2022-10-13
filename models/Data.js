@@ -3,7 +3,7 @@
 import mongoose from "mongoose";
 const DataSchema = new mongoose.Schema(
   {
-    cryptoName: {
+    name: {
       type: String,
       required: true,
     },
@@ -11,7 +11,11 @@ const DataSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    currentPrice: {
+    price: {
+      type: String,
+      required: true,
+    },
+    iconUrl: {
       type: String,
       required: true,
     },
