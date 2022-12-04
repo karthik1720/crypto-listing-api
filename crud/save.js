@@ -20,3 +20,10 @@ export const getData = async (req, res) => {
     console.log(error);
   }
 };
+
+export const deleteData = async (req, res) => {
+  try {
+    const data = await Data.deleteOne({ _id: req.params.id });
+    res.status(200).json(data);
+  } catch (error) {}
+};
